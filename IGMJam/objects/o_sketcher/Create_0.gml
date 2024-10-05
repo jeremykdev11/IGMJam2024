@@ -11,8 +11,9 @@ moveSpeed		=	1;
 sketchDir		=	-1;
 prevSketchDir	=	-1;
 
-vertexList = ds_list_create();
-shapeList = ds_list_create();
+vertexList		= ds_list_create();
+
+intersectSafeguard = 0;
 
 #endregion
 
@@ -38,23 +39,46 @@ StateFree = function()
 			y: y
 		};
 		ds_list_add(vertexList, _coordinates);
+		
+		// Update safeguard
+		intersectSafeguard = 1;
 	}
 	
 	// Move sketcher
 	x += hSpeed;
 	y += vSpeed;
-	
+		
 	// Check for line intersection
-	var _intersectionIndex = FindIntersection(vertexList);
-	if (_intersectionIndex != -1)
+	if (intersectSafeguard == 0)
 	{
-		// Create new shape and add to shape list
-		show_debug_message(get_timer());
+		var _intersectionIndex = FindIntersection(vertexList);
+		if (_intersectionIndex != -1)
+		{
+			intersectSafeguard = 1;
+			
+			// Create shape:
+			// - Add intersection point to vertex list
+			var _coordinates = 
+			{
+				x: x,
+				y: y
+			};
+			ds_list_add(vertexList, _coordinates);
+			
+			// - Create shape using intersection point
+			var _shape = CreateShape(vertexList, _intersectionIndex);
+			
+			show_debug_message(point_in_polygon(160, 144, _shape));
+			
+			ds_list_clear(vertexList)
+			ds_list_destroy(_shape);
+		}
 	}
 	
+	// END OF FUNCTION UPDATES
 	// Update prevSketchDir
-	// Make sure this is at the END of the function
 	prevSketchDir = sketchDir;
+	if (intersectSafeguard > 0) intersectSafeguard--;
 }
 state = StateFree;
 
