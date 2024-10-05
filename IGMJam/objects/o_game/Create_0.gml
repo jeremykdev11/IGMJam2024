@@ -19,4 +19,4 @@ part_type_alpha2(global.pParticle, 1, 0);
 draw_set_font(fnt_boreBlasters16);
 
 // GAME LOADED
-room_goto(r_gameplay);
+room_goto(r_menu);
