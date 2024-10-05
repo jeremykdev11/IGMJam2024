@@ -34,17 +34,21 @@
   },
   "name":"IGMJam",
   "resources":[
+    {"id":{"name":"o_dustBunny","path":"objects/o_dustBunny/o_dustBunny.yy",},},
+    {"id":{"name":"o_game","path":"objects/o_game/o_game.yy",},},
     {"id":{"name":"o_sketcher","path":"objects/o_sketcher/o_sketcher.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"r_gameplay","path":"rooms/r_gameplay/r_gameplay.yy",},},
     {"id":{"name":"CreateShape","path":"scripts/CreateShape/CreateShape.yy",},},
     {"id":{"name":"FindIntersection","path":"scripts/FindIntersection/FindIntersection.yy",},},
     {"id":{"name":"point_in_polygon","path":"scripts/point_in_polygon/point_in_polygon.yy",},},
+    {"id":{"name":"s_dustBunnyMoving","path":"sprites/s_dustBunnyMoving/s_dustBunnyMoving.yy",},},
+    {"id":{"name":"s_dustBunnyStill","path":"sprites/s_dustBunnyStill/s_dustBunnyStill.yy",},},
     {"id":{"name":"temp","path":"sprites/temp/temp.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"r_gameplay","path":"rooms/r_gameplay/r_gameplay.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
