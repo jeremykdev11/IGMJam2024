@@ -42,7 +42,15 @@ StateFree = function()
 	vSpeed = lengthdir_y(_inputMagnitude * moveSpeed, _inputDirection);
 	
 	// Update sketchDir
-	if (_inputMagnitude != 0) sketchDir = _inputDirection;
+	if (_inputMagnitude != 0) 
+	{
+		sketchDir = _inputDirection;
+		// Sketch particles
+		part_type_direction(global.pParticle, _inputDirection + 140, _inputDirection + 220, 0, 0);
+		part_type_life(global.pParticle, 10, 20);
+		part_type_speed(global.pParticle, 0.3, 0.5, -0.01, 0);
+		part_particles_create(global.pSystem, x, y, global.pParticle, 1);
+	}
 	// If player changes direction, create a vertex
 	if (prevSketchDir != sketchDir)
 	{
@@ -79,8 +87,17 @@ StateFree = function()
 			// Capture dust bunnies in shape
 			with (o_dustBunny)
 			{
-				if (point_in_polygon(x, y, _shape)) instance_destroy();
+				if (point_in_polygon(x, y, _shape))
+				{
+					part_type_direction(global.pParticle, 0, 359, 0, 0);
+					part_type_life(global.pParticle, 30, 60);
+					part_type_speed(global.pParticle, 0.5, 1, -0.02, 0);
+					part_particles_create(global.pSystem, x, y, global.pParticle, 5);
+					instance_destroy();
+				}
 			}
+			// Screenshake
+			o_screenshake.magnitude = 5;
 			
 			// Reset vertex list and clean up shape
 			ds_list_clear(vertexList)

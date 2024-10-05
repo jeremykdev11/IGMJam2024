@@ -17,7 +17,7 @@ function RandomDirection()
 }
 function RandomTimeInterval() { return random_range(180, 300); }
 
-moveDirection	=	RandomDirection;
+moveDirection	=	RandomDirection();
 stateTimer		=	RandomTimeInterval();
 
 // State Machines
