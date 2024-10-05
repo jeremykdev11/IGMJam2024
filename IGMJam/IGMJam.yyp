@@ -195,6 +195,7 @@
     {"id":{"name":"s_dustBunnyMoving","path":"sprites/s_dustBunnyMoving/s_dustBunnyMoving.yy",},},
     {"id":{"name":"s_dustBunnyStill","path":"sprites/s_dustBunnyStill/s_dustBunnyStill.yy",},},
     {"id":{"name":"s_frame","path":"sprites/s_frame/s_frame.yy",},},
+    {"id":{"name":"s_logo","path":"sprites/s_logo/s_logo.yy",},},
     {"id":{"name":"s_menuItem","path":"sprites/s_menuItem/s_menuItem.yy",},},
     {"id":{"name":"s_particle","path":"sprites/s_particle/s_particle.yy",},},
     {"id":{"name":"s_sketcher","path":"sprites/s_sketcher/s_sketcher.yy",},},

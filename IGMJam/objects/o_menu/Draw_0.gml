@@ -12,7 +12,7 @@ if (room == r_menu)
 		draw_set_color(c_black);
 		if (options[menu, i] != 0 && options[menu, i] != undefined)
 		{
-			var _y = GAMEHEIGHT/2 + (menuSpace * i);
+			var _y = GAMEHEIGHT*0.75 + (menuSpace * i);
 			if (i == pos)
 			{
 				draw_set_color(c_white);
