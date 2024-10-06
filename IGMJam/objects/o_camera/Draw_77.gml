@@ -5,11 +5,12 @@ gpu_set_blendenable(false);
 shader_set(SHD_CRT);
 shader_set_uniform_f_array(UCRTParams, CRT.Params);
 
-var _scale = window_get_width()/camW;
+var _scale = window_get_height()/camH;
+var _xOffset = window_get_width()/2 - camW*_scale/2;
 draw_surface_ext
 (
 	application_surface,
-	0,
+	_xOffset,
 	0,
 	_scale,
 	_scale,

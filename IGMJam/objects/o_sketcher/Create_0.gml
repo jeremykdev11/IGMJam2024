@@ -15,6 +15,9 @@ vertexList		= ds_list_create();
 
 intersectSafeguard = 0;
 
+// Move sound
+moveCount		=	0;
+
 #endregion
 
 #region State Machine
@@ -45,12 +48,23 @@ StateFree = function()
 	if (_inputMagnitude != 0) 
 	{
 		sketchDir = _inputDirection;
+		
 		// Sketch particles
 		part_type_direction(global.pParticle, _inputDirection + 140, _inputDirection + 220, 0, 0);
 		part_type_life(global.pParticle, 10, 20);
 		part_type_speed(global.pParticle, 0.3, 0.5, -0.01, 0);
 		part_particles_create(global.pSystem, x, y, global.pParticle, 1);
+		
+		// Walk sound
+		if (moveCount mod 12 == 0)
+		{
+			audio_sound_pitch(snd_move, random_range(0.9, 1.1));
+			audio_play_sound(snd_move, 5, false);
+		}
+		moveCount++;
 	}
+	else moveCount = 0;
+	
 	// If player changes direction, create a vertex
 	if (prevSketchDir != sketchDir)
 	{
@@ -111,6 +125,11 @@ StateFree = function()
 			{
 				with(_bunnies[| i])
 				{
+					// Sound
+					audio_stop_sound(snd_squeak);
+					audio_sound_pitch(snd_squeak, random_range(0.9, 1.1));
+					audio_play_sound(snd_squeak, 5, false);
+					
 					// Particle
 					part_type_direction(global.pParticle, 0, 359, 0, 0);
 					part_type_life(global.pParticle, 30, 60);
