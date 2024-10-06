@@ -75,7 +75,8 @@ StateFree = function()
 	// Check for line intersection
 	if (intersectSafeguard == 0)
 	{
-		var _intersectionIndex = FindIntersection(vertexList);
+		var _curPoint = { x: x, y : y }
+		var _intersectionIndex = FindIntersection(vertexList, _curPoint);
 		if (_intersectionIndex != -1)
 		{
 			// Add intersection point to vertex line
