@@ -13,5 +13,5 @@ alarm[0] = duration * 2;
 wordString = "[wave]" + wordString;
 word = scribble(wordString);
 
-word.starting_format(drawFont, c_black);
+word.starting_format(drawFont, c_white);
 word.align(fa_center, fa_middle);

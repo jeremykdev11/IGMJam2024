@@ -17,8 +17,8 @@ part_type_alpha2(global.pParticle, 1, 0);
 
 // Font
 draw_set_font(fnt_boreBlasters16);
-global.font = font_add_sprite(s_font, 32, true, 1);
-global.fontS = font_add_sprite(s_fontS, 32, true, 1);
+global.font = font_add_sprite(s_font, 32, true, -1);
+global.fontS = font_add_sprite(s_fontS, 32, true, -1);
 
 // GAME LOADED
 room_goto(r_menu);

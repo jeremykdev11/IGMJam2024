@@ -2,13 +2,13 @@
 if (room == r_gameplay)
 {
 	draw_set_font(global.fontS)
-	draw_set_color(c_black);
+	draw_set_color(c_white);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	
 	// Score
-	draw_text(73, 200, "target: " + string(targetScore));
-	draw_text(162, 200, "score: " + string(playerScore));
+	draw_text(72, 199, "target: " + string(targetScore));
+	draw_text(161, 199, "score: " + string(playerScore));
 	
 	// Timer
 	draw_set_color(c_white);
