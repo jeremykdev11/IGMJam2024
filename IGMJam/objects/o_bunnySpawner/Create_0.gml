@@ -1,13 +1,16 @@
 /// @desc Config
 
 spawnPerWave	= 3;
-timePerWave		= 900;
+timePerWave		= 600;
 waveTimer		= 0;
 
-function SpawnNewWave()
+bunnyCountTime	= 600;
+bunnyTimer		= bunnyCountTime;
+
+function SpawnNewWave(_count)
 {
 	waveTimer = timePerWave;
-	for (var i = 0; i < spawnPerWave; i++)
+	for (var i = 0; i < _count; i++)
 	{
 		NewBunny();
 	}

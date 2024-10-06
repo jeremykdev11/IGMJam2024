@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GetCapturedBunnies",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GetCapturedBunnies",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,1 @@
+word.draw(x, y, typist);

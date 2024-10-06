@@ -4,6 +4,8 @@ menuUp = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 menuDown = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
 menuSelect = keyboard_check_pressed(vk_enter);
 
+if (GamePaused()) exit;
+
 // Get Menu Position
 if (menuUp) pos--;
 if (menuDown) pos++;
@@ -33,7 +35,7 @@ if (menuSelect)
 					//audio_stop_sound(musMenu);
 					//audio_play_sound(sndGameStart, 5, false); // Game Start
 					//RoomSet(r1);
-					room_goto(r_gameplay);
+					instance_create_depth(0, 0, -999, o_transitionOut, { targetRoom : r_gameplay} );
 				break;
 				
 				case 1: // QUIT

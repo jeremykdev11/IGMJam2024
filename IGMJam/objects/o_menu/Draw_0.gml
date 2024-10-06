@@ -3,6 +3,12 @@
 if (room == r_menu)
 {
 	//Draw Main Menu
+	
+	// Menu Art
+	var _art = 104;
+	draw_sprite(s_etchFull, 0, _art, _art + 6*sin(get_timer()/500000))
+	
+	// Menu Buttons
 	scribble_anim_wave(1, 50, 0.2);
 	draw_set_font(fnt_boreBlasters16);
 	draw_set_halign(fa_left);

@@ -3,3 +3,6 @@
 part_type_destroy(global.pParticle);
 part_emitter_destroy_all(global.pSystem);
 part_system_destroy(global.pSystem);
+
+font_delete(global.font);
+font_delete(global.fontS);

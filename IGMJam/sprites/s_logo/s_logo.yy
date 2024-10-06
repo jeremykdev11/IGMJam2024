@@ -19,6 +19,7 @@
   "height":88,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"6db7cf87-a211-4a0b-a1d4-c96a7cb1e39e","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"6db7cf87-a211-4a0b-a1d4-c96a7cb1e39e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"39c44054-9cd9-43a9-b2bc-b1afa2ef3f03","blendMode":0,"displayName":"default","isLocked":false,"name":"39c44054-9cd9-43a9-b2bc-b1afa2ef3f03","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"s_logo",
