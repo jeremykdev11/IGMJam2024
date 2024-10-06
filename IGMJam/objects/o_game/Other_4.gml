@@ -1,5 +1,5 @@
 /// @desc Gameplay Config
-playerScore = 0;
+if (room == r_gameplay) playerScore = 0;
 
 maxGameTimer = 900;
 gameTimer = maxGameTimer;

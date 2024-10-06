@@ -19,8 +19,8 @@ selectCurPos = lerp(selectCurPos, selectTargetPos, 0.5);
 if (menuUp || menuDown)
 {
 	selectCurPos = 0;
-	//audio_sound_pitch(sndMenuMove, random_range(0.93, 1.07));
-	//audio_play_sound(sndMenuMove, 5, false);
+	audio_sound_pitch(snd_hover, random_range(0.93, 1.07));
+	audio_play_sound(snd_hover, 5, false);
 }
 	
 #region Interact with Main Menu
@@ -32,9 +32,8 @@ if (menuSelect)
 			switch(pos)
 			{
 				case 0: // Play
-					//audio_stop_sound(musMenu);
-					//audio_play_sound(sndGameStart, 5, false); // Game Start
-					//RoomSet(r1);
+					audio_sound_pitch(snd_select, random_range(0.9, 1.1));
+					audio_play_sound(snd_select, 5, false)
 					instance_create_depth(0, 0, -999, o_transitionOut, { targetRoom : r_gameplay} );
 				break;
 				

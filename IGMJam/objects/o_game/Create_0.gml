@@ -13,5 +13,5 @@ function NextWave()
 
 function GameOver()
 {
-	
+	instance_create_depth(0, 0, -999, o_transitionOut, { targetRoom : r_gameover} );
 }

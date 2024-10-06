@@ -1,4 +1,7 @@
 /// @desc Movement behavior
+
+if (GamePaused()) exit;
+
 state();
 
 depth = -y;

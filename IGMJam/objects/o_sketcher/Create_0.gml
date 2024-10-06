@@ -79,6 +79,10 @@ StateFree = function()
 		var _intersectionIndex = FindIntersection(vertexList, _curPoint);
 		if (_intersectionIndex != -1)
 		{
+			// Play sound
+			audio_sound_pitch(snd_explode, random_range(0.9, 1.1));
+			audio_play_sound(snd_explode, 5, false);
+			
 			// Add intersection point to vertex line
 			CreateVertex();
 			
