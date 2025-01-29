@@ -3,6 +3,10 @@
 // Random
 randomize();
 
+var _gain = audio_group_get_gain(audiogroup_default);
+audio_group_set_gain(audiogroup_default, _gain * 0.4, 0);
+
+
 //Particle Setup
 global.pSystem = part_system_create_layer("Management", true);
 global.pParticle = part_type_create();

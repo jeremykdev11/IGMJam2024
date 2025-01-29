@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.105918,
+  "duration":0.374218,
   "name":"snd_move",
   "parent":{
     "name":"Sounds",
